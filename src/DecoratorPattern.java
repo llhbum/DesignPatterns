@@ -1,6 +1,7 @@
 public class DecoratorPattern {
     /*
     DecoratorPattern
+
         [부제]
             - 객체 꾸미기
 
@@ -11,5 +12,23 @@ public class DecoratorPattern {
         [예시]
             - 자바의 I/O 클래스가 이 패턴으로 설계되어 있습니다.
 
+        [사용방법]
+            - 기본 기능에 추가할 수 있는 기능의 종류가 많은 경우에 각 추가 기능을 Decorator클래스로 정의 한 후 필요한 Decorator 객체를 조합함으로써 추가 기능의 조합을 설계하는 방식이다.
+
+        [스타**커피점 예시]
+            - 기본 음료는 Beverage클래스를 상속받게한다.음료에 들어가는 토핑들은 Decorator을 상속받게 한다.그리고 Decorator클래스는 Beverege클래스를 상속받는다
+
+            [Beverage 클래스]
+                - Beverage 클래스는 가장 상위에 있는 슈퍼 클래스다.음료의 공통적인 성질을 따로 뺸 것으로 카페에서 판매하는 모든 음료는 이 클래스를 상속 받아야 한다.
+
+            [Decorator 클래스]
+                - 모든 첨가물들이 상속 받아야하는 클래스 Decorator 클래스는 Beverage 클래스를 상속받는다.
+
+            [각종 음료 클래스]
+                - Beverage 클래스를 상속받고, 추상클래스를 구현한다.
+
+            [각종 첨가물 클래스]
+                - 첨가물 클래스로, 생성자에서 넘겨받은 Beverage의 인스턴스를 가지고, 현재 인스턴스에 구현 되어 있는 객체의 필드와 메소드에 접근 합니다.
+                  첨가물 클래스는 Decorator 클래스를 상속받습니다.
      */
 }
